@@ -1,0 +1,454 @@
+---------------------------------------
+Begin Slurm Prolog: Aug-28-2025 13:04:19
+Job ID:    393133
+User ID:   ychauhan9
+Account:   gts-tbaluta3
+Job name:  ToolEvaluation
+Partition: gpu-l40s
+QOS:       embers
+---------------------------------------
+Evaluating LLM: qwen2, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json, B-Tool: tool1...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: qwen2, with Retriever: facebook/contriever-msmarco, using B-Tool: tool1
+Using attacked results from: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:17,  2.25it/s]  7%|▋         | 3/41 [00:00<00:08,  4.73it/s] 10%|▉         | 4/41 [00:00<00:07,  4.91it/s] 12%|█▏        | 5/41 [00:01<00:07,  5.03it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.12it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.17it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.22it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.25it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.26it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.28it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.29it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.29it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.29it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.31it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.32it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.31it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.32it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.32it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.32it/s] 51%|█████     | 21/41 [00:04<00:03,  5.32it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.31it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.30it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.29it/s] 61%|██████    | 25/41 [00:04<00:03,  5.29it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.29it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.29it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.29it/s] 71%|███████   | 29/41 [00:05<00:02,  5.30it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.29it/s] 76%|███████▌  | 31/41 [00:05<00:01,  5.29it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.28it/s] 80%|████████  | 33/41 [00:06<00:01,  5.28it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.28it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.29it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.29it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.29it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.29it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.29it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.21it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:04<00:12,  4.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:08<00:08,  4.39s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:12<00:04,  4.29s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.20s/it]
+Current Cluster: 0Current Cluster: 1Current Cluster: 2Current Cluster: 3Current Cluster: 4Current Cluster: 5Current Cluster: 6Current Cluster: 7Current Cluster: 8Current Cluster: 9Current Cluster: 10Current Cluster: 11Current Cluster: 12Current Cluster: 13	FINISHED
+{9: [{'user_request': 'recommend a website or app for live football highlights from multiple sources like YouTube and Ok.RU'}], 10: [{'user_request': 'reliable source for football highlights supporting YouTube and Ok.RU'}]}
+Stage2 saved to stage1_generated.json
+78.95%, 15/19, 10.53%, 2/19, 
+Evaluating stage2...
+Current Cluster: 0Current Cluster: 1Current Cluster: 2Current Cluster: 3Current Cluster: 4Current Cluster: 5Current Cluster: 6Current Cluster: 7Current Cluster: 8Current Cluster: 9Current Cluster: 10Current Cluster: 11Current Cluster: 12Current Cluster: 13	FINISHED
+12.5, 2/16, 6.25, 1/16, 100, 1/1, DOS, 
+Evaluating stage2 independently...
+Current Cluster: 0Current Cluster: 1Current Cluster: 2Current Cluster: 3Current Cluster: 4Current Cluster: 5Current Cluster: 6Current Cluster: 7Current Cluster: 8Current Cluster: 9Current Cluster: 10Current Cluster: 11Current Cluster: 12Current Cluster: 13	FINISHED
+[TRAIN]
+71.43, 10/14, 7.143, 1/14, 100, 1/1, DOS, 
+[EVAL]
+63.16, 12/19, 10.53, 2/19, 100, 2/2, DOS, 0, 0/2, utc, 
+Evaluating LLM: qwen2, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json, B-Tool: tool2...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: qwen2, with Retriever: facebook/contriever-msmarco, using B-Tool: tool2
+Using attacked results from: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:18,  2.20it/s]  7%|▋         | 3/41 [00:00<00:08,  4.66it/s] 10%|▉         | 4/41 [00:00<00:07,  4.83it/s] 12%|█▏        | 5/41 [00:01<00:07,  4.95it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.04it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.09it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.13it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.15it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.17it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.19it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.20it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.21it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.20it/s] 37%|███▋      | 15/41 [00:03<00:04,  5.20it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.20it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.21it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.21it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.22it/s] 49%|████▉     | 20/41 [00:03<00:04,  5.22it/s] 51%|█████     | 21/41 [00:04<00:03,  5.21it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.21it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.21it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.20it/s] 61%|██████    | 25/41 [00:04<00:03,  5.20it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.19it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.19it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.19it/s] 71%|███████   | 29/41 [00:05<00:02,  5.20it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.20it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.20it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.19it/s] 80%|████████  | 33/41 [00:06<00:01,  5.20it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.20it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.20it/s] 88%|████████▊ | 36/41 [00:07<00:00,  5.19it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.20it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.20it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.21it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.22it/s]100%|██████████| 41/41 [00:08<00:00,  5.23it/s]100%|██████████| 41/41 [00:08<00:00,  5.12it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.59s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.57s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.56s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  2.11s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.91s/it]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 522, in eval
+    with open(attacked_results, "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json'
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: qwen2, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json, B-Tool: tool3...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: qwen2, with Retriever: facebook/contriever-msmarco, using B-Tool: tool3
+Using attacked results from: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:17,  2.23it/s]  7%|▋         | 3/41 [00:00<00:08,  4.68it/s] 10%|▉         | 4/41 [00:00<00:07,  4.86it/s] 12%|█▏        | 5/41 [00:01<00:07,  4.98it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.07it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.12it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.15it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.17it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.20it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.21it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.22it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.24it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.24it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.24it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.24it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.24it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.23it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.24it/s] 49%|████▉     | 20/41 [00:03<00:04,  5.24it/s] 51%|█████     | 21/41 [00:04<00:03,  5.26it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.24it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.24it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.24it/s] 61%|██████    | 25/41 [00:04<00:03,  5.24it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.22it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.23it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.23it/s] 71%|███████   | 29/41 [00:05<00:02,  5.23it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.23it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.21it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.21it/s] 80%|████████  | 33/41 [00:06<00:01,  5.23it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.23it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.23it/s] 88%|████████▊ | 36/41 [00:07<00:00,  5.23it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.23it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.23it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.23it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.23it/s]100%|██████████| 41/41 [00:07<00:00,  5.24it/s]100%|██████████| 41/41 [00:07<00:00,  5.15it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.60s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.57s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.57s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.54s/it]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 522, in eval
+    with open(attacked_results, "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json'
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: deepseek, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json, B-Tool: tool1...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: deepseek, with Retriever: facebook/contriever-msmarco, using B-Tool: tool1
+Using attacked results from: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:18,  2.21it/s]  7%|▋         | 3/41 [00:00<00:08,  4.68it/s] 10%|▉         | 4/41 [00:00<00:07,  4.86it/s] 12%|█▏        | 5/41 [00:01<00:07,  4.99it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.08it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.13it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.17it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.20it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.22it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.23it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.24it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.24it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.25it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.24it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.25it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.25it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.25it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.26it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.27it/s] 51%|█████     | 21/41 [00:04<00:03,  5.27it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.25it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.25it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.24it/s] 61%|██████    | 25/41 [00:04<00:03,  5.24it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.23it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.23it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.24it/s] 71%|███████   | 29/41 [00:05<00:02,  5.24it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.24it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.24it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.23it/s] 80%|████████  | 33/41 [00:06<00:01,  5.24it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.24it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.24it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.24it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.24it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.26it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.25it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.25it/s]100%|██████████| 41/41 [00:07<00:00,  5.26it/s]100%|██████████| 41/41 [00:07<00:00,  5.16it/s]
+A new version of the following files was downloaded from https://huggingface.co/deepseek-ai/DeepSeek-V3.1:
+- configuration_deepseek.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/deepseek-ai/DeepSeek-V3.1:
+- modeling_deepseek.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+  [2m2025-08-28T18:18:55.435351Z[0m [33m WARN[0m  [33mStatus Code: 504. Retrying..., [1;33mrequest_id[0m[33m: ""[0m
+    [2;3mat[0m /home/runner/work/xet-core/xet-core/cas_client/src/http_client.rs:220
+
+  [2m2025-08-28T18:18:55.435409Z[0m [33m WARN[0m  [33mRetry attempt #0. Sleeping 2.470878818s before the next attempt[0m
+    [2;3mat[0m /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reqwest-retry-0.7.0/src/middleware.rs:171
+
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 514, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 593, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5453, in _load_pretrained_model
+    disk_only_shard_files = get_disk_only_shard_files(device_map, weight_map)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 6135, in get_disk_only_shard_files
+    files_content[filename].append(device_map[weight_name])
+                                   ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: ''
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: deepseek, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json, B-Tool: tool2...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: deepseek, with Retriever: facebook/contriever-msmarco, using B-Tool: tool2
+Using attacked results from: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:18,  2.21it/s]  7%|▋         | 3/41 [00:00<00:08,  4.67it/s] 10%|▉         | 4/41 [00:00<00:07,  4.86it/s] 12%|█▏        | 5/41 [00:01<00:07,  5.01it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.10it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.16it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.20it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.23it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.25it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.27it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.28it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.28it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.28it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.28it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.28it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.28it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.28it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.29it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.29it/s] 51%|█████     | 21/41 [00:04<00:03,  5.30it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.29it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.28it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.28it/s] 61%|██████    | 25/41 [00:04<00:03,  5.28it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.27it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.28it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.28it/s] 71%|███████   | 29/41 [00:05<00:02,  5.29it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.29it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.28it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.27it/s] 80%|████████  | 33/41 [00:06<00:01,  5.27it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.27it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.27it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.27it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.27it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.27it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.27it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.19it/s]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 514, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 593, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5453, in _load_pretrained_model
+    disk_only_shard_files = get_disk_only_shard_files(device_map, weight_map)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 6135, in get_disk_only_shard_files
+    files_content[filename].append(device_map[weight_name])
+                                   ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: ''
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: deepseek, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json, B-Tool: tool3...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: deepseek, with Retriever: facebook/contriever-msmarco, using B-Tool: tool3
+Using attacked results from: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:18,  2.19it/s]  7%|▋         | 3/41 [00:00<00:08,  4.67it/s] 10%|▉         | 4/41 [00:00<00:07,  4.87it/s] 12%|█▏        | 5/41 [00:01<00:07,  5.00it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.09it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.15it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.19it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.21it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.23it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.26it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.28it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.29it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.29it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.29it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.29it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.30it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.28it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.30it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.30it/s] 51%|█████     | 21/41 [00:04<00:03,  5.31it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.31it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.29it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.29it/s] 61%|██████    | 25/41 [00:04<00:03,  5.29it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.28it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.28it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.28it/s] 71%|███████   | 29/41 [00:05<00:02,  5.28it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.28it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.28it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.27it/s] 80%|████████  | 33/41 [00:06<00:01,  5.27it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.27it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.27it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.27it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.27it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.27it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.28it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.29it/s]100%|██████████| 41/41 [00:07<00:00,  5.19it/s]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 514, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 593, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5453, in _load_pretrained_model
+    disk_only_shard_files = get_disk_only_shard_files(device_map, weight_map)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 6135, in get_disk_only_shard_files
+    files_content[filename].append(device_map[weight_name])
+                                   ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: ''
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: localg, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json, B-Tool: tool1...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: localg, with Retriever: facebook/contriever-msmarco, using B-Tool: tool1
+Using attacked results from: ./attack_results/g1_train_a/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:18,  2.19it/s]  7%|▋         | 3/41 [00:00<00:08,  4.67it/s] 10%|▉         | 4/41 [00:00<00:07,  4.87it/s] 12%|█▏        | 5/41 [00:01<00:07,  5.01it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.10it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.16it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.19it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.22it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.24it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.25it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.27it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.29it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.29it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.29it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.29it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.29it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.29it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.30it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.30it/s] 51%|█████     | 21/41 [00:04<00:03,  5.30it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.29it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.28it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.28it/s] 61%|██████    | 25/41 [00:04<00:03,  5.28it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.27it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.27it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.27it/s] 71%|███████   | 29/41 [00:05<00:02,  5.28it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.28it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.27it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.26it/s] 80%|████████  | 33/41 [00:06<00:01,  5.28it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.27it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.27it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.26it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.27it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.27it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.27it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.27it/s]100%|██████████| 41/41 [00:07<00:00,  5.29it/s]100%|██████████| 41/41 [00:07<00:00,  5.19it/s]
+MXFP4 quantization requires triton >= 3.4.0 and kernels installed, we will default to dequantizing the model to bf16
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:20, 10.15s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:17<00:08,  8.52s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:20<00:10, 10.04s/it]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 518, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5532, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+                                                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 975, in load_shard_file
+    disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 883, in _load_state_dict_into_meta_model
+    hf_quantizer.create_quantized_param(
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/quantizers/quantizer_mxfp4.py", line 247, in create_quantized_param
+    dequantize(module, param_name, param_value, target_device, dq_param_name, **shard_kwargs)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 342, in dequantize
+    dequantized = convert_moe_packed_tensors(getattr(module, blocks_attr), getattr(module, scales_attr))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 124, in convert_moe_packed_tensors
+    idx_hi = (blk >> 4).to(torch.long)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.98 GiB. GPU 0 has a total capacity of 44.39 GiB of which 431.31 MiB is free. Including non-PyTorch memory, this process has 43.96 GiB memory in use. Of the allocated memory 41.33 GiB is allocated by PyTorch, and 2.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: localg, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json, B-Tool: tool2...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: localg, with Retriever: facebook/contriever-msmarco, using B-Tool: tool2
+Using attacked results from: ./attack_results/g1_train_b/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:17,  2.24it/s]  7%|▋         | 3/41 [00:00<00:08,  4.71it/s] 10%|▉         | 4/41 [00:00<00:07,  4.87it/s] 12%|█▏        | 5/41 [00:01<00:07,  5.01it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.09it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.16it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.19it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.22it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.24it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.26it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.26it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.28it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.28it/s] 37%|███▋      | 15/41 [00:02<00:04,  5.29it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.28it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.29it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.29it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.30it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.30it/s] 51%|█████     | 21/41 [00:04<00:03,  5.31it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.30it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.28it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.27it/s] 61%|██████    | 25/41 [00:04<00:03,  5.28it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.27it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.27it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.27it/s] 71%|███████   | 29/41 [00:05<00:02,  5.28it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.27it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.26it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.25it/s] 80%|████████  | 33/41 [00:06<00:01,  5.26it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.26it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.26it/s] 88%|████████▊ | 36/41 [00:06<00:00,  5.26it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.26it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.26it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.27it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.28it/s]100%|██████████| 41/41 [00:07<00:00,  5.19it/s]
+MXFP4 quantization requires triton >= 3.4.0 and kernels installed, we will default to dequantizing the model to bf16
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:04,  2.50s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.24s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:07<00:03,  3.92s/it]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 518, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5532, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+                                                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 975, in load_shard_file
+    disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 883, in _load_state_dict_into_meta_model
+    hf_quantizer.create_quantized_param(
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/quantizers/quantizer_mxfp4.py", line 247, in create_quantized_param
+    dequantize(module, param_name, param_value, target_device, dq_param_name, **shard_kwargs)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 342, in dequantize
+    dequantized = convert_moe_packed_tensors(getattr(module, blocks_attr), getattr(module, scales_attr))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 124, in convert_moe_packed_tensors
+    idx_hi = (blk >> 4).to(torch.long)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.98 GiB. GPU 0 has a total capacity of 44.39 GiB of which 431.31 MiB is free. Including non-PyTorch memory, this process has 43.96 GiB memory in use. Of the allocated memory 41.33 GiB is allocated by PyTorch, and 2.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+Evaluating LLM: localg, Retriever: facebook/contriever-msmarco, Result File: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json, B-Tool: tool3...
+If you want to use `BertLMHeadModel` as a standalone, add `is_decoder=True.`
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at facebook/contriever-msmarco and are newly initialized: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating LLM: localg, with Retriever: facebook/contriever-msmarco, using B-Tool: tool3
+Using attacked results from: ./attack_results/g1_train_c/attack_results_facebook_contriever-msmarco.json
+Training data: ./data/g1_train_a.json, Evaluation data: ./data/g1_eval_a.json
+Evaluating stage1...
+Building corpus...
+Building corpus embeddings...
+  0%|          | 0/41 [00:00<?, ?it/s]  2%|▏         | 1/41 [00:00<00:19,  2.03it/s]  7%|▋         | 3/41 [00:00<00:08,  4.47it/s] 10%|▉         | 4/41 [00:00<00:07,  4.73it/s] 12%|█▏        | 5/41 [00:01<00:07,  4.91it/s] 15%|█▍        | 6/41 [00:01<00:06,  5.03it/s] 17%|█▋        | 7/41 [00:01<00:06,  5.11it/s] 20%|█▉        | 8/41 [00:01<00:06,  5.16it/s] 22%|██▏       | 9/41 [00:01<00:06,  5.20it/s] 24%|██▍       | 10/41 [00:02<00:05,  5.21it/s] 27%|██▋       | 11/41 [00:02<00:05,  5.24it/s] 29%|██▉       | 12/41 [00:02<00:05,  5.25it/s] 32%|███▏      | 13/41 [00:02<00:05,  5.25it/s] 34%|███▍      | 14/41 [00:02<00:05,  5.27it/s] 37%|███▋      | 15/41 [00:03<00:04,  5.28it/s] 39%|███▉      | 16/41 [00:03<00:04,  5.27it/s] 41%|████▏     | 17/41 [00:03<00:04,  5.27it/s] 44%|████▍     | 18/41 [00:03<00:04,  5.26it/s] 46%|████▋     | 19/41 [00:03<00:04,  5.29it/s] 49%|████▉     | 20/41 [00:03<00:03,  5.29it/s] 51%|█████     | 21/41 [00:04<00:03,  5.28it/s] 54%|█████▎    | 22/41 [00:04<00:03,  5.28it/s] 56%|█████▌    | 23/41 [00:04<00:03,  5.27it/s] 59%|█████▊    | 24/41 [00:04<00:03,  5.27it/s] 61%|██████    | 25/41 [00:04<00:03,  5.27it/s] 63%|██████▎   | 26/41 [00:05<00:02,  5.27it/s] 66%|██████▌   | 27/41 [00:05<00:02,  5.27it/s] 68%|██████▊   | 28/41 [00:05<00:02,  5.27it/s] 71%|███████   | 29/41 [00:05<00:02,  5.26it/s] 73%|███████▎  | 30/41 [00:05<00:02,  5.27it/s] 76%|███████▌  | 31/41 [00:06<00:01,  5.26it/s] 78%|███████▊  | 32/41 [00:06<00:01,  5.25it/s] 80%|████████  | 33/41 [00:06<00:01,  5.27it/s] 83%|████████▎ | 34/41 [00:06<00:01,  5.27it/s] 85%|████████▌ | 35/41 [00:06<00:01,  5.26it/s] 88%|████████▊ | 36/41 [00:07<00:00,  5.26it/s] 90%|█████████ | 37/41 [00:07<00:00,  5.26it/s] 93%|█████████▎| 38/41 [00:07<00:00,  5.26it/s] 95%|█████████▌| 39/41 [00:07<00:00,  5.26it/s] 98%|█████████▊| 40/41 [00:07<00:00,  5.26it/s]100%|██████████| 41/41 [00:07<00:00,  5.27it/s]100%|██████████| 41/41 [00:07<00:00,  5.15it/s]
+MXFP4 quantization requires triton >= 3.4.0 and kernels installed, we will default to dequantizing the model to bf16
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:04,  2.49s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.57s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.24s/it]
+Traceback (most recent call last):
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 615, in <module>
+    fire.Fire(main)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 135, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 468, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 579, in main
+    eval(
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/evaluate.py", line 518, in eval
+    LLM_MODEL, LLM_TOKENIZER = load_model(
+                               ^^^^^^^^^^^
+  File "/storage/scratch1/6/ychauhan9/ToolCommander/utils.py", line 163, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5069, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 5532, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+                                                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 975, in load_shard_file
+    disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/modeling_utils.py", line 883, in _load_state_dict_into_meta_model
+    hf_quantizer.create_quantized_param(
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/quantizers/quantizer_mxfp4.py", line 247, in create_quantized_param
+    dequantize(module, param_name, param_value, target_device, dq_param_name, **shard_kwargs)
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 342, in dequantize
+    dequantized = convert_moe_packed_tensors(getattr(module, blocks_attr), getattr(module, scales_attr))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/hcoda1/6/ychauhan9/.conda/envs/toolcommander/lib/python3.11/site-packages/transformers/integrations/mxfp4.py", line 124, in convert_moe_packed_tensors
+    idx_hi = (blk >> 4).to(torch.long)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.98 GiB. GPU 0 has a total capacity of 44.39 GiB of which 431.31 MiB is free. Including non-PyTorch memory, this process has 43.96 GiB memory in use. Of the allocated memory 41.33 GiB is allocated by PyTorch, and 2.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: atl1-1-03-007-29-0: task 0: Exited with exit code 1
+All evaluations completed!
+---------------------------------------
+Begin Slurm Epilog: Aug-28-2025 14:30:29
+Job ID:        393133
+User ID:       ychauhan9
+Account:       gts-tbaluta3
+Job name:      ToolEvaluation
+Resources:     cpu=4,gres/gpu:l40s=1,mem=12G,node=1
+Rsrc Used:     cput=05:44:44,vmem=0,walltime=01:26:11,mem=38576K,energy_used=0
+Partition:     gpu-l40s
+QOS:           embers
+Nodes:         atl1-1-03-007-29-0
+---------------------------------------
